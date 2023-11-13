@@ -1,0 +1,36 @@
+<script>
+function printOrders(orders) 
+{
+    for (let order of orders) 
+    {
+        let sum=order.price*order.quantity;
+        let discount=sum*(order.discount/100); //Я решил видоизменить ответ скидки, дав окончательную сумму товара, прошу прощения за самовольность
+        let total=sum-discount;
+        console.log(`Заказ покупателя ${order.fio} составил ${sum}, скидка составила ${discount}`);
+    }
+}
+let orders=[
+    {
+        fio:"Ivan",
+        tovar:"phone",
+        price:10000,
+        quantity:2,
+        discount: 10 // 10% скидка
+    },
+    {
+        fio:"Peter",
+        tovar:"usb",
+        price:2300,
+        quantity:5,
+        discount: 20 // 20% скидка
+    },
+    {
+        fio:"Mary",
+        tovar:"connector",
+        price:100,
+        quantity:100,
+        discount: 50 // 50% скидка
+    },
+];
+printOrders(orders);
+</script>

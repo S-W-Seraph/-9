@@ -1,0 +1,20 @@
+<script>
+function Menu(navList, textList)
+{
+    this.navList=navList;
+    this.textList=textList;
+    this.wrapperA = function()
+    {
+        return this.navList.map((elem, index)=>`<a href='${elem}'>${this.textList[index]}</a>`);
+    }
+}
+let mainMenu=new Menu(["home.html", "services.html", "price.html", "about.html"], ["Home", "Services", "Price", "About"]);
+for (let elem of mainMenu.navList)
+    console.log(elem);
+console.log(mainMenu.wrapperA());
+
+let footerMenu=new Menu(["newPage.html", "checkPage.html", "seoPage.html"], ["New Page", "Check Page", "SEO Page"]);
+for (let elem of footerMenu.navList)
+    console.log(elem);
+console.log(footerMenu.wrapperA());
+</script>

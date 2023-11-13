@@ -1,0 +1,15 @@
+<script>
+function createLinkGenerator(category) 
+{
+    return function(code) 
+    {
+        return `http://myshop.ru/${category}/${code}`
+    }
+}
+const createPCLink=createLinkGenerator('PC');
+const createNotebooksLink=createLinkGenerator('Notebooks');
+const createMonitorLink=createLinkGenerator('Monitors');
+console.log(createPCLink(1001)); // http://myshop.ru/PC/1001
+console.log(createNotebooksLink(4004)); // http://myshop.ru/Notebooks/4004
+console.log(createMonitorLink(345)); // http://myshop.ru/Monitors/345
+</script>

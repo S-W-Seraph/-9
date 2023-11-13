@@ -1,0 +1,31 @@
+<script>
+function printOrders(orders) 
+{
+    for (let order of orders) 
+    {
+        let sum=order.price*order.quantity;
+        console.log(`Заказ покупателя ${order.fio} составил ${sum}`);
+    }
+}
+let orders=[
+    {
+        fio:"Ivan",
+        tovar:"phone",
+        price:10000,
+        quantity:2
+    },
+    {
+        fio:"Peter",
+        tovar:"usb",
+        price:2300,
+        quantity:5
+    },
+    {
+        fio:"Mary",
+        tovar:"connector",
+        price:100,
+        quantity:100
+    },
+];
+printOrders(orders);
+</script>
